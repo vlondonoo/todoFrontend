@@ -8,7 +8,7 @@ RUN npm run build --prod
 ### STEP 2: Run web server ###
 FROM nginx:alpine
 
-COPY --from=node /app/dist/todo-app-frontend /usr/share/nginx/html
+COPY --from=node /app/dist/todo-app-frontend-angular /usr/share/nginx/html
 RUN ls -la /usr/share/nginx/html
 
 ### execute
